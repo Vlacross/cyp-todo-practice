@@ -1,4 +1,20 @@
-const todos = (state = [], action) => {
+
+let initialState = [
+  {
+    id: 0,
+    text: 'Copy TodoApp by Hande',
+    completed: true
+  },
+  {
+    id: 1,
+    text: 'add cypress.io testing',
+    completed: false
+  }
+]
+
+
+
+const todos = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [
