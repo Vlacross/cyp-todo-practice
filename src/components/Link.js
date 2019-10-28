@@ -7,9 +7,10 @@ let linkStyle = {
   marginLeft: '4px'
 }
 
-const Link = ({ active, children, onClick }) => (
+const Link = ({ active, children, onClick, className }) => (
 
   <button 
+    className={className}
     onClick={onClick}
     disabled={active}
     style={linkStyle}>

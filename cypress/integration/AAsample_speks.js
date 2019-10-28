@@ -9,10 +9,18 @@ describe('site visit', function() {
   it('Obtains foreign content!', function() {
     cy.visit('https://example.cypress.io')
 
-    cy.contains('filter').click()
+    // cy.contains('filter').click()
+    cy.contains('type').click()
 
-    cy.url().should('include', '/commands/traversal')
+    // cy.url().should('include', '/commands/traversal')
+    cy.url().should('include', '/commands/actions')
+
+    cy.get('.action-email')
+      .type("lacksam.splinters@scoars.grum")
+      .should('have.value', 'lacksam.splinters@scoars.grum')
+      console.log('flooring')
   })
+  
 });
 
 // describe('Init test fail', function() {
