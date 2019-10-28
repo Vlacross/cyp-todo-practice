@@ -1,4 +1,4 @@
-describe('Todo page loades', function() {
+describe('Todo page loads', function() {
   
   it('loads all inputs', function() {
     cy.visit('http://localhost:3000/')
