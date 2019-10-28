@@ -9,7 +9,7 @@ describe('Todo page loads', function() {
     
   })
 
-  it.only('shows only one button disabled at a time', function() {
+  it('shows only one button disabled at a time', function() {
     cy.visit('http://localhost:3000/')
 
     /*check the default button is the only button disabled */
@@ -40,6 +40,14 @@ describe('Todo page loads', function() {
     .should('have.prop', 'disabled', false)
 
    
+    
+  })
+
+  it.only('captures input value', function() {
+    cy.visit('http://localhost:3000/')
+
+    cy.get('.todo-input-label').click()
+    cy.focused().should('have.prop', 'class', 'todo-input')
     
   })
 
